@@ -1,18 +1,27 @@
 var request = require('request');
 var express = require('express');
+var hbs = require('express-hbs');
 
 var app = express();
 
+// Use `.hbs` for extensions and find partials in `views/partials`.
+app.engine('hbs', hbs.express4({
+}));
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
 app.use(express.static(__dirname + '/public'));
 
-app.get('/data', function(req, res){
+app.get('/', function(req, res) {
   request.get('http://iowacodecamp.com/data/json', function(err, response, body){
-    if (err) return res.status(500).end();
-    res.set('Content-type', 'application/json');
-    res.end(body);
+    // if (err) return res.status(500).end();
+    // res.end(body);
+    res.render('index', {
+      body: body
+    });
   });
 });
 
-app.listen(process.env.NODE_PORT || 3000, function(){
+app.listen(8080, function(){
   console.log('server running');
 })
