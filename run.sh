@@ -2,8 +2,6 @@
 
 cd iowacodecamp-mobile
 npm install
-npm install bower
-./node_modules/bower/bin/bower install
 ./node_modules/ember-cli/bin/ember build
 cd ..
 
