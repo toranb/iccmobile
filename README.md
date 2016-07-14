@@ -9,4 +9,14 @@
 3) build and run the app with docker
 
     docker build -t iccmoble .
-    docker run -it -p 8080:8080 iccmobile
+    docker run -it -p 80:8080 iccmobile
+
+To deploy via heroku
+
+    heroku plugins:install heroku-container-registry
+    heroku container:login
+    heroku container:push web --app iccmobile
+    heroku ps:scale web=1 --app iccmobile
+    heroku open --app iccmobile
+
+Heroku Settings: add `Config Variable` PORT with a value of 80
