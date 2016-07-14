@@ -8,7 +8,7 @@
 
 3) build and run the app with docker
 
-    docker build -t iccmoble .
+    docker build -t iccmobile .
     docker run -it -p 80:8080 iccmobile
 
 To deploy via heroku
