@@ -4,6 +4,8 @@ var hbs = require('express-hbs');
 
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 // Use `.hbs` for extensions and find partials in `views/partials`.
 app.engine('hbs', hbs.express4({
 }));
@@ -22,6 +24,6 @@ app.get('/', function(req, res) {
   });
 });
 
-app.listen(8080, function(){
+app.listen(port, function(){
   console.log('server running');
 })
