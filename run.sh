@@ -15,3 +15,4 @@ mkdir public
 cd public
 cp -r ../../iowacodecamp-mobile/dist/assets .
 cp -r ../../iowacodecamp-mobile/dist/fonts .
+cp -r ../../iowacodecamp-mobile/dist/images .
