@@ -21,10 +21,6 @@ var SessionsComponent = Ember.Component.extend({
                     sessions: []
                 }));
             }
-            var speaker = this.get('speakers').filter((model) => {
-                return model.id === session.speaker;
-            })[0];
-            Ember.set(session, 'speaker_name', speaker.name);
             var filteredByTime = models.filter((item) => {
                 return item.time === time;
             });
