@@ -7,7 +7,7 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
-var defaultImage = fs.readFileSync('iowacodecamp-mobile/public/images/default.png');
+var defaultImage = fs.readFileSync(__dirname + '/public/images/default.png');
 
 // Use `.hbs` for extensions and find partials in `views/partials`.
 app.engine('hbs', hbs.express4({
