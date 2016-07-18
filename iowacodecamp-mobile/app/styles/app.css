@@ -154,34 +154,30 @@ h3 {
 
 .speaker-detail-img {
   margin-bottom: 10px;
-  display:block;
-  float: left;
-  margin-right: 10px;
-  clip: rect(0px, 90px, 117px, 0px);
+  display:inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
 }
 .speaker-detail-web, .speaker-detail-location, .speaker-detail-name {
   font-weight:bold;
   display: block;
-  margin-bottom: 30px;
 }
 .speaker-detail-web a {
   max-width: 100px;
   vertical-align: middle;
 }
 .profile-wrap {
-  margin: 25px 0;
+  margin: auto;
+  width: 50%;
 }
 .img-wrap, .details-wrap {
   height: 117px;
 }
-.img-wrap {
-  float: left;
-}
 .speaker-detail-bio {
-  border-top: 1px solid #ff9200;
   padding-top: 10px;
-  clear: both;
-  display: block;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 .session-name, .session-speaker-name, .speaker-name {
   width: 90%!important;
@@ -234,9 +230,7 @@ table {
 }
 .session-name, .speaker-name, .speaker-detail-name {
   font-weight: bold;
-  color: dimgray;
   display: block;
-  opacity: 0.9;
 }
 .hide-overflow {
     overflow:hidden;
@@ -247,4 +241,15 @@ table {
 td a {
     display:block;
     width:100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.round {
+    border-radius: 1000px;
+}
+.container {
+    padding-left: 24px;
+    padding-right: 24px;
 }

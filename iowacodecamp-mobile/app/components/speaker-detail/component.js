@@ -4,18 +4,14 @@ import hbs from 'htmlbars-inline-precompile';
 var SpeakerDetailComponent = Ember.Component.extend({
     layout: hbs`
         <div class="profile-wrap">
-          <div class="img-wrap">
-            <img class="speaker-detail-img" src={{speaker-url speaker.img}}>
-          </div>
-          <div class="details-wrap">
-            <span class="speaker-detail-name">{{speaker.name}}</span>
-            <span class="speaker-detail-location">{{speaker.location}}</span>
-            <span class="speaker-detail-web">
-              <a href={{speaker.web}}>{{speaker.web}}</a>
-            </span>
+          <img class="speaker-detail-img round" src={{speaker-url speaker.img}}>
+          <div class="speaker-detail-name">{{speaker.name}}</div>
+          <div class="speaker-detail-location">{{speaker.location}}</div>
+          <div class="speaker-detail-web">
+            <a href={{speaker.web}}>{{speaker.web}}</a>
           </div>
         </div>
-        <span class="speaker-detail-bio">{{speaker.bio}}</span>
+        <div class="speaker-detail-bio"><p>{{speaker.bio}}</p></div>
         <h3>Sessions for this speaker</h3>
         <table class="table">
           <tbody>

@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Helper.helper((params) => {
-    return "/images/" + params[0];
+    var image = params[0];
+    return image ? "/images/" + image : "/images/default.png";
 });

@@ -47,6 +47,18 @@ test('speaker details route will show the speaker details', function(assert) {
     });
 });
 
+test('speaker image will have default png when no other available', function(assert) {
+    assert.expect(2);
+    visit('/speakers');
+    click('.speaker-link :eq(2)');
+    andThen(function() {
+        var speaker_name = find('.speaker-detail-name');
+        assert.equal(speaker_name.text(), 'Scott Addie');
+        var speaker_img = find('.speaker-detail-img:eq(0)');
+        assert.ok(speaker_img.prop('src').endsWith('/images/default.png'));
+    });
+});
+
 test('speaker details route has link to each session', function(assert) {
     assert.expect(3);
     visit('/speakers');
