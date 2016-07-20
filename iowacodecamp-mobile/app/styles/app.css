@@ -46,15 +46,6 @@ h3 {
     padding: 0 10%;
 }
 
-.session-name {
-    /* padding: 3%; */
-    display:block;
-    text-align: left;
-    /* text-align: center; */
-    /* font-size: 125%; */
-    font-weight:bold;
-}
-
 .session-desc {
     padding: 3%;
     display: block;
@@ -84,8 +75,10 @@ h3 {
     margin: 1%;
 }
 
-.session-speaker-name {
+.session-speaker-name, .speaker-location {
     text-align: center;
+    color: #777!important;
+    font-weight: normal!important;
 }
 
 .session-speaker-link a {
@@ -109,13 +102,16 @@ h3 {
     text-align: center;
 }
 
-.speaker-name {
+.speaker-name, .session-name {
     text-align: left;
-    /* text-align: center; */
     display:block;
-    /* padding: 3%; */
-    /* font-size: 125%; */
-    font-weight: bold;
+    font-size: 160%;
+    padding-bottom: 4px;
+}
+
+.group-time {
+    color: #4297FF;
+    font-size: 130%;
 }
 
 .speaker-bio {
@@ -128,7 +124,6 @@ h3 {
 }
 
 .speaker-session-name {
-    font-weight: bold;
     display:block;
 }
 
@@ -160,7 +155,6 @@ h3 {
   height: 200px;
 }
 .speaker-detail-web, .speaker-detail-location, .speaker-detail-name {
-  font-weight:bold;
   display: block;
 }
 .speaker-detail-web a {
@@ -183,7 +177,7 @@ h3 {
   width: 90%!important;
 }
 .session-link, .speaker-link {
-  margin-top: -9px!important;
+  margin-top: -40px!important;
 }
 .session-link, .speaker-link, .session-speaker-link, .speaker-session-link {
   vertical-align: middle !important;
@@ -198,38 +192,36 @@ table {
   border-top: 0!important;
   border-left: 0!important;
   border-right: 0!important;
-  margin-top: -10px;
 }
 .navbar-toggle:hover, .navbar-toggle:focus {
   background-color: #fff!important;
 }
 .navbar-brand {
   color: #ff9200!important;
-  font-weight: bold;
 }
 .navbar-default {
   margin-bottom: 10px!important;
   border-top: 0!important;
   background-color: #fff!important;
-  border-color: #ff9200!important;
+  border-color: #eee!important;
 }
 .navbar-collapse {
-  border-color: #ff9200!important;
+  border-color: #eee!important;
 }
 .icon-bar {
-  background-color: #ff9200!important;
+  background-color: #eee!important;
 }
 .navbar-toggle {
-  border-color: #ff9200!important;
+  border-color: #eee!important;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
   border-top: 0;
+  padding: 11px;
 }
 .table-border>thead>tr>th, .table-border>tbody>tr>th, .table-border>tfoot>tr>th, .table-border>thead>tr>td, .table-border>tbody>tr>td, .table-border>tfoot>tr>td {
-  border-bottom: 1px solid #ff9200!important;
+  border-bottom: 1px solid #eee!important;
 }
 .session-name, .speaker-name, .speaker-detail-name {
-  font-weight: bold;
   display: block;
 }
 .hide-overflow {

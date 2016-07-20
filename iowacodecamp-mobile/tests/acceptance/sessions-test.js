@@ -14,9 +14,9 @@ test('sessions route will show the list of available sessions', function(assert)
         assert.equal(first_name, 'Continuous Security');
         var last_name = find('.session-name:eq(1)').text();
         assert.equal(last_name, 'From Legacy MVC to Modern MVC: An ASP.NET Core Migration Path');
-        var first_link = find('.session-link:eq(0) a').attr('href');
+        var first_link = find('.session-link:eq(0)').attr('href');
         assert.equal(first_link, '#');
-        var last_link = find('.session-link:eq(1) a').attr('href');
+        var last_link = find('.session-link:eq(1)').attr('href');
         assert.equal(last_link, '#');
     });
 });
@@ -24,7 +24,7 @@ test('sessions route will show the list of available sessions', function(assert)
 test('session details route will show the session details', function(assert) {
     assert.expect(8);
     visit('/');
-    click('.session-link:eq(0) a');
+    click('.session-link:eq(0)');
     andThen(function() {
         assert.ok(currentURL().match(/^\/sessions\/[0-9]/));
         var session_name = find('.session-name');
@@ -61,7 +61,7 @@ test('sessions will be sorted and grouped by listing time', function(assert) {
 test('session details route has link to each speaker', function(assert) {
     assert.expect(3);
     visit('/');
-    click('.session-link:eq(0) a');
+    click('.session-link:eq(0)');
     click('.session-speaker-link:eq(0) a');
     andThen(function() {
         assert.ok(currentURL().match(/^\/speakers\/[0-9]/));

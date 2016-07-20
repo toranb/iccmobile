@@ -17,7 +17,7 @@ test('speakers route will show the list of available speakers', function(assert)
         assert.equal(last_name, 'Scott Addie');
         var last_location = find('.speaker-location:eq(1)').text();
         assert.equal(last_location, 'Madison, WI');
-        var first_link = find('.speaker-link:eq(0) a').attr('href');
+        var first_link = find('.speaker-link:eq(0)').attr('href');
         assert.equal(first_link, '#');
     });
 });
@@ -50,7 +50,7 @@ test('speaker details route will show the speaker details', function(assert) {
 test('speaker image will have default png when no other available', function(assert) {
     assert.expect(2);
     visit('/speakers');
-    click('.speaker-link :eq(2)');
+    click('.speaker-link:eq(1)');
     andThen(function() {
         var speaker_name = find('.speaker-detail-name');
         assert.equal(speaker_name.text(), 'Scott Addie');
