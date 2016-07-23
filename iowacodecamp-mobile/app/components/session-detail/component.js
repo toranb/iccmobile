@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 var SessionDetailComponent = Ember.Component.extend({
     layout: hbs`
       <div class="profile-wrap">
-          <img class="speaker-detail-img round" src={{speaker-url session.speaker_image}}>
+          <img class="speaker-detail-img round center" src={{speaker-url session.speaker_image}}>
           <h4 class="the-session-name">{{session.name}}</h4>
           <div class="the-speaker-name">{{session.speaker_name}}</div>
           <div class="session-time">{{session.time}}</div>

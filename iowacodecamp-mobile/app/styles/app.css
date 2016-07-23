@@ -46,12 +46,12 @@ h3 {
     padding: 0 10%;
 }
 
-.session-room, .session-time, .the-speaker-name {
+.session-room, .session-time, .the-speaker-name, .speaker-detail-name, .speaker-detail-location, .speaker-detail-web {
     font-size: 110%;
     text-align: center;
-    padding: 1%;
     display:block;
     font-weight: bold;
+    color: #555!important;
 }
 
 .session-level {
@@ -89,6 +89,10 @@ h3 {
 
 .no-sessions-found {
     text-align: center;
+}
+
+.session-name, .session-speaker-name, .speaker-name {
+    width: 90%!important;
 }
 
 .speaker-name, .session-name {
@@ -137,10 +141,10 @@ h3 {
 }
 
 .speaker-detail-img {
-  margin-bottom: 10px;
+  border: 6px solid #4297FF;
   display:inline-block;
   vertical-align: middle;
-  width: 200px;
+  width: 206px;
 }
 .speaker-detail-web, .speaker-detail-location, .speaker-detail-name {
   display: block;
@@ -151,8 +155,10 @@ h3 {
 }
 .profile-wrap {
   padding-top: 40px;
-  margin: auto;
-  width: 50%;
+}
+img.center {
+  display: block;
+  margin: 0 auto;
 }
 .img-wrap, .details-wrap {
   height: 117px;
@@ -162,15 +168,19 @@ h3 {
   margin-left: 12px;
   margin-right: 12px;
 }
-.session-desc {
+.session-desc, .speaker-detail-bio {
   font-size: 120%;
   padding-top: 10px;
   margin-left: 12px;
   margin-right: 12px;
   padding-bottom: 40px;
+  color: #555!important;
 }
-.session-name, .session-speaker-name, .speaker-name {
-  width: 90%!important;
+.the-session-name, .speaker-detail-name {
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
 }
 .session-link, .speaker-link {
   margin-top: -40px!important;
