@@ -46,21 +46,10 @@ h3 {
     padding: 0 10%;
 }
 
-.session-desc {
-    padding: 3%;
-    display: block;
-}
-
-.session-time {
+.session-room, .session-time, .the-speaker-name {
+    font-size: 110%;
     text-align: center;
-    padding: 3%;
-    display:block;
-    font-weight: bold;
-}
-
-.session-room {
-    text-align: center;
-    padding: 3%;
+    padding: 1%;
     display:block;
     font-weight: bold;
 }
@@ -152,7 +141,6 @@ h3 {
   display:inline-block;
   vertical-align: middle;
   width: 200px;
-  height: 200px;
 }
 .speaker-detail-web, .speaker-detail-location, .speaker-detail-name {
   display: block;
@@ -162,6 +150,7 @@ h3 {
   vertical-align: middle;
 }
 .profile-wrap {
+  padding-top: 40px;
   margin: auto;
   width: 50%;
 }
@@ -172,6 +161,13 @@ h3 {
   padding-top: 10px;
   margin-left: 12px;
   margin-right: 12px;
+}
+.session-desc {
+  font-size: 120%;
+  padding-top: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-bottom: 40px;
 }
 .session-name, .session-speaker-name, .speaker-name {
   width: 90%!important;

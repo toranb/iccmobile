@@ -66,9 +66,9 @@ test('speaker details route has link to each session', function(assert) {
     click('.speaker-session-link:eq(0) a');
     andThen(function() {
         assert.ok(currentURL().match(/^\/sessions\/[0-9]/));
-        var session_name = find('.session-name');
+        var session_name = find('.the-session-name');
         assert.equal(session_name.text(), 'Continuous Security');
-        var speaker_name = find('.session-speaker-name');
+        var speaker_name = find('.the-speaker-name');
         assert.equal(speaker_name.text(), 'Wendy Istvanick');
     });
 });

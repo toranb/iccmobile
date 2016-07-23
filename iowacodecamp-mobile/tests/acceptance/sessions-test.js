@@ -22,12 +22,12 @@ test('sessions route will show the list of available sessions', function(assert)
 });
 
 test('session details route will show the session details', function(assert) {
-    assert.expect(8);
+    assert.expect(6);
     visit('/');
     click('.session-link:eq(0)');
     andThen(function() {
         assert.ok(currentURL().match(/^\/sessions\/[0-9]/));
-        var session_name = find('.session-name');
+        var session_name = find('.the-session-name');
         assert.equal(session_name.text(), 'Continuous Security');
         var session_desc = find('.session-desc');
         assert.ok(session_desc.text().indexOf('Security breaches are becoming') !== -1);
@@ -35,12 +35,8 @@ test('session details route will show the session details', function(assert) {
         assert.equal(session_time.text(), '9:00 AM - 10:15 AM');
         var session_room = find('.session-room');
         assert.equal(session_room.text(), 'Prairie.Code() - Room 1');
-        var session_level = find('.session-level');
-        assert.equal(session_level.text(), '');
-        var speakers = find('.session-speaker-row').length;
-        assert.equal(speakers, 1);
-        var first_speaker_name = find('.session-speaker-name:eq(0)');
-        assert.equal(first_speaker_name.text(), 'Wendy Istvanick');
+        var speaker_name = find('.the-speaker-name');
+        assert.equal(speaker_name.text(), 'Wendy Istvanick');
     });
 });
 
@@ -55,19 +51,5 @@ test('sessions will be sorted and grouped by listing time', function(assert) {
         assert.equal(first_time, '9:00 AM - 10:15 AM');
         var last_time = find('.group-time:eq(1)').text();
         assert.equal(last_time, '10:30 AM - 11:45 AM');
-    });
-});
-
-test('session details route has link to each speaker', function(assert) {
-    assert.expect(3);
-    visit('/');
-    click('.session-link:eq(0)');
-    click('.session-speaker-link:eq(0) a');
-    andThen(function() {
-        assert.ok(currentURL().match(/^\/speakers\/[0-9]/));
-        var speaker_name = find('.speaker-detail-name');
-        assert.equal(speaker_name.text(), 'Wendy Istvanick');
-        var session_name = find('.speaker-session-name');
-        assert.equal(session_name.text(), 'Continuous Security');
     });
 });
