@@ -14,9 +14,41 @@
 
 @implementation AppDelegate
 
+-(void)alertMessage:(NSString*)message
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Something went wrong" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)checkInternet
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSURL *url = [NSURL URLWithString:@"https://www.google.com"];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"HEAD";
+    request.cachePolicy = NSURLRequestReloadIgnoringLocalAndRemoteCacheData;
+    request.timeoutInterval = 10.0;
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        if (error || httpResponse.statusCode != 200) {
+            [self alertMessage:@"Error has occured fetching session data from the server"];
+        }
+    }];
+    
+    [task resume];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self checkInternet];
     return YES;
 }
 
