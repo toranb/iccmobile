@@ -3,7 +3,17 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'asset-cache': {
+      version: '2',
+      include: [
+        'assets/vendor.js',
+        'assets/iowacodecamp.js',
+        'assets/vendor.css',
+        'assets/iowacodecamp.css',
+        'fonts/glyphicons-halflings-regular.*',
+        'images/default.png'
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
