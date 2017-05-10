@@ -4,7 +4,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'asset-cache': {
-      version: '2',
+      version: '3',
       include: [
         'assets/vendor.js',
         'assets/iowacodecamp.js',
