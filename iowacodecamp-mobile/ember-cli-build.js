@@ -3,8 +3,12 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    'esw-index': {
+      location: 'index.html',
+      version: '6'
+    },
     'asset-cache': {
-      version: '4',
+      version: '6',
       include: [
         'assets/vendor.js',
         'assets/iowacodecamp.js',

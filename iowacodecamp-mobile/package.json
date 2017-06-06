@@ -46,6 +46,7 @@
     "ember-resolver": "^4.0.0",
     "ember-service-worker": "^0.6.6",
     "ember-service-worker-asset-cache": "^0.6.1",
+    "ember-service-worker-index": "^0.6.1",
     "ember-source": "~2.13.3",
     "ember-symbol-observable": "^0.1.2",
     "json-stringify-safe-es": "0.0.3",
