@@ -4,13 +4,7 @@ To run the client app with ember-cli
 
     https://nodejs.org/en/download/
 
-2) update the session data so you can use the app
-
-    cd iowacodecamp-mobile
-    open app/index.html and replace the text/preload
-    script tag with what exists in tests/index.html
-
-3) build and run the app with ember-cli
+2) build and run the app with ember-cli
 
     cd iowacodecamp-mobile
     npm i && bower i
