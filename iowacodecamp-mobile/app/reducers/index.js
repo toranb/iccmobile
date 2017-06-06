@@ -10,7 +10,7 @@ const initialState = {
 
 var all = ((state, action) => {
     if (action.type === 'DESERIALIZE_ALL') {
-        return Ember.assign({}, state, deserialize(action.response));
+        return Ember.assign({}, state, deserialize(action.payload.d));
     }
     if (action.type === 'SELECT_SPEAKER') {
         return Ember.assign({}, state, selectSpeaker(state.speakers, action.speaker));

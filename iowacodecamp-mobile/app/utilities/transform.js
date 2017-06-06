@@ -21,7 +21,7 @@ var selectSession = function(sessions, session_id) {
 var deserialize = function(response) {
     var sessions = [];
     var speakers = [];
-    response.d.data.forEach(function(data) {
+    response.data.forEach(function(data) {
         var session_id = Ember.uuid();
         var speaker_id = Ember.uuid();
         var session = {id: session_id, name: data.session, level: data.level, time: data.time, room: data.room, desc: data.desc, speaker: speaker_id, speaker_name: data.speaker.name, speaker_image: data.speaker.img};

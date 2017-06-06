@@ -1,13 +1,22 @@
-import fetch from 'fetch';
 import { route } from 'ember-redux';
 
 const model = dispatch => {
-  return fetch('/api/sessions')
-    .then(fetched => fetched.json())
-    .then(response => dispatch({
-      type: 'DESERIALIZE_ALL',
-      response: response
-    }));
+  dispatch({
+    type: 'PRE_SESSIONS',
+    payload: {},
+    meta: {
+      offline: {
+        effect: {
+          url: '/api/sessions',
+          method: 'GET'
+        },
+        commit: {
+          type: 'DESERIALIZE_ALL',
+          meta: {}
+        }
+      }
+    }
+  })
 };
 
 export default route({model})();
