@@ -1,6 +1,6 @@
-import route from 'ember-redux/route';
+import { route } from 'ember-redux';
 
-var model = (dispatch, params) => {
+const model = (dispatch, params) => {
     dispatch({type: 'SELECT_SPEAKER', speaker: params.speaker_id});
 };
 

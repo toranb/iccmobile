@@ -1,9 +1,13 @@
-import Ember from 'ember';
-import route from 'ember-redux/route';
+import fetch from 'fetch';
+import { route } from 'ember-redux';
 
-var beforeModel = (dispatch) => {
-    var sessions = Ember.$('[preload-everything]').data('configuration');
-    dispatch({type: 'DESERIALIZE_ALL', response: sessions});
+const model = dispatch => {
+  return fetch('/api/sessions')
+    .then(fetched => fetched.json())
+    .then(response => dispatch({
+      type: 'DESERIALIZE_ALL',
+      response: response
+    }));
 };
 
-export default route({beforeModel})();
+export default route({model})();

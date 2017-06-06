@@ -38,7 +38,7 @@ test('speaker details route will show the speaker details', function(assert) {
         var first_session_link = find('.speaker-session-link:eq(0) a').attr('href');
         assert.equal(first_session_link, '#');
         var speaker_img = find('.speaker-detail-img:eq(0)');
-        assert.ok(speaker_img.prop('src').endsWith('/images/xyz.jpg'));
+        assert.ok(speaker_img.attr('src').endsWith('/images/xyz.jpg'));
         var speaker_location = find('.speaker-detail-location:eq(0)');
         assert.equal(speaker_location.text(), 'Chicago, IL');
         var speaker_web = find('.speaker-detail-web');

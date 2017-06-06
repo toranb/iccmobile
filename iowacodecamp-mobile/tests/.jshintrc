@@ -1,5 +1,6 @@
 {
   "predef": [
+    "server",
     "ajax",
     "document",
     "window",
