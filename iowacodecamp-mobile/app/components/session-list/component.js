@@ -18,10 +18,6 @@ var SessionListComponent = Ember.Component.extend({
             </td>
           {{/link-to}}
         {{/each}}
-      {{else}}
-      <tr class="no-sessions-found">
-        <td>no sessions found</td>
-      </tr>
       {{/each}}
       </tbody>
     </table>
