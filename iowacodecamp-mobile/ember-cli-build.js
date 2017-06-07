@@ -5,10 +5,10 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'esw-index': {
       location: 'index.html',
-      version: '6'
+      version: '7'
     },
     'asset-cache': {
-      version: '6',
+      version: '7',
       include: [
         'assets/vendor.js',
         'assets/iowacodecamp.js',
