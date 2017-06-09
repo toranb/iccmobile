@@ -18,6 +18,15 @@
 @synthesize spinner;
 @synthesize lastKnownUrl;
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSString *deviceModel = (NSString*)[UIDevice currentDevice].model;
+    if ([deviceModel rangeOfString:@"iPad"].location != NSNotFound)  {
+        [self.viewWeb setFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *fullUrl = @"https://iccmobile.herokuapp.com";
