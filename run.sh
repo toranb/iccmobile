@@ -7,12 +7,4 @@ cd ..
 
 cd iccmobile-server
 npm install
-mkdir views
-cd views
-cp ../../iowacodecamp-mobile/dist/index.html index.hbs
-cd ..
-mkdir public
-cd public
-cp -r ../../iowacodecamp-mobile/dist/assets .
-cp -r ../../iowacodecamp-mobile/dist/fonts .
-cp -r ../../iowacodecamp-mobile/dist/images .
+cp -r ../iowacodecamp-mobile/dist public
