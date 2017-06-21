@@ -9,7 +9,7 @@ const initialState = {
 
 var all = ((state, action) => {
     if (action.type === 'DESERIALIZE_ALL') {
-        return Object.assign({}, state, deserialize(action.payload.d));
+        return Object.assign({}, state, deserialize(action.response.d));
     }
     if (action.type === 'SELECT_SPEAKER') {
         return Object.assign({}, state, selectSpeaker(state.speakers, action.speaker));
