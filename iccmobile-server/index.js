@@ -1,6 +1,6 @@
 var request = require('request');
 var express = require('express');
-var hbs = require('express-hbs');
+var compression = require('compression');
 var fs = require('fs');
 
 var app = express();
@@ -9,12 +9,7 @@ var port = process.env.PORT || 8080;
 
 var defaultImage = fs.readFileSync(__dirname + '/../iowacodecamp-mobile/public/images/default.png');
 
-// Use `.hbs` for extensions and find partials in `views/partials`.
-app.engine('hbs', hbs.express4({
-}));
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-
+app.use(compression());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/api/sessions', function(req, res) {
