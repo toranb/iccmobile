@@ -1,8 +1,7 @@
-package epicsoftware.iowacodecamp.com.iccmobile;
+package com.iccmobile.android;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
