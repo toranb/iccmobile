@@ -31,7 +31,8 @@ var deserialize = function(response) {
     });
     return {
         sessions: sessions,
-        speakers: speakers
+        speakers: speakers,
+        loading: false
     };
 };
 

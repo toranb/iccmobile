@@ -1,3 +1,18 @@
+.refresh-spinner {
+  position: absolute;
+  padding-top: 5px;
+  left: 43%;
+}
+
+.refresh-parent {
+  position: relative;
+}
+
+.refresh-child {
+  position: relative;
+  background-color: white;
+}
+
 @icc-green: #7F8400;
 @icc-orange: #B96D00;
 @icc-brown: #333333;
@@ -31,7 +46,7 @@ h3 {
 
 .navbar-icc {
     text-align: center;
-    background-color: @icc-green;   
+    background-color: @icc-green;
     border-color: @icc-grey;
     padding: 5%;
 }
@@ -40,9 +55,9 @@ h3 {
     width: 50%;
     border-color: @icc-grey;
 }
-.navbar-icc a { 
+.navbar-icc a {
     color: Black;
-    font-size: 110%;   
+    font-size: 110%;
     padding: 0 10%;
 }
 
@@ -71,7 +86,7 @@ h3 {
 }
 
 .session-speaker-link a {
-    margin-right: 7%; 
+    margin-right: 7%;
     border-color: @icc-brown;
     background-color: @icc-orange;
     color: black;

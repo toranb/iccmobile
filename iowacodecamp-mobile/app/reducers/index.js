@@ -4,12 +4,16 @@ const initialState = {
     sessions: [],
     speakers: [],
     selectedSession: null,
-    selectedSpeaker: null
+    selectedSpeaker: null,
+    loading: false
 };
 
 var all = ((state, action) => {
     if (action.type === 'DESERIALIZE_ALL') {
-        return Object.assign({}, state, deserialize(action.response.d));
+        return Object.assign({}, state, deserialize(action.payload.response.d));
+    }
+    if (action.type === 'REFRESH_SESSIONS') {
+        return Object.assign({}, state, {loading: true});
     }
     if (action.type === 'SELECT_SPEAKER') {
         return Object.assign({}, state, selectSpeaker(state.speakers, action.speaker));

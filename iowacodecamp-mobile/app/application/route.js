@@ -1,13 +1,7 @@
-import fetch from 'fetch';
 import { route } from 'ember-redux';
 
 const model = dispatch => {
-  return fetch(`/api/sessions`)
-    .then(fetched => fetched.json())
-    .then(response => dispatch({
-      type: 'DESERIALIZE_ALL',
-      response: response
-  }));
+  dispatch({type: 'REFRESH_SESSIONS'});
 };
 
 export default route({model})();

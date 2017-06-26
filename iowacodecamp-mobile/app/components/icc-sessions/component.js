@@ -5,7 +5,14 @@ import { connect } from 'ember-redux';
 var stateToComputed = (state) => {
   return {
     sessions: state.all.sessions,
-    speakers: state.all.speakers
+    speakers: state.all.speakers,
+    loading: state.all.loading
+  };
+};
+
+var dispatchToActions = dispatch => {
+  return {
+    refresh: () => dispatch({type: 'REFRESH_SESSIONS'})
   };
 };
 
@@ -29,8 +36,8 @@ var SessionsComponent = Ember.Component.extend({
         return models;
     }),
     layout: hbs`
-        {{yield everything}}
+        {{yield everything loading (action "refresh")}}
     `
 });
 
-export default connect(stateToComputed)(SessionsComponent);
+export default connect(stateToComputed, dispatchToActions)(SessionsComponent);

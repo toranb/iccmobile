@@ -1,3 +1,9 @@
-{{#icc-sessions as |everything|}}
-  {{session-list everything=everything}}
+{{#icc-sessions as |everything loading refresh|}}
+
+  {{#if everything}}
+    {{#pull-refresh refresh=refresh loading=loading}}
+      {{session-list everything=everything}}
+    {{/pull-refresh}}
+  {{/if}}
+
 {{/icc-sessions}}
