@@ -1,7 +1,8 @@
 .refresh-spinner {
   position: absolute;
   padding-top: 5px;
-  left: 43%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .refresh-parent {
