@@ -1,3 +1,7 @@
+.container {
+  -webkit-overflow-scrolling: auto;
+}
+
 .refresh-spinner {
   position: absolute;
   padding-top: 5px;
