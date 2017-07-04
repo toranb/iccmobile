@@ -20,7 +20,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     NSString *deviceModel = (NSString*)[UIDevice currentDevice].model;
     if ([deviceModel rangeOfString:@"iPad"].location != NSNotFound)  {
         [self.viewWeb setFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
@@ -33,6 +33,7 @@
     NSURL *url = [NSURL URLWithString:fullUrl];
     [viewWeb loadRequest:[NSURLRequest requestWithURL:url]];
     viewWeb.delegate = self;
+    viewWeb.scrollView.bounces = NO;
 }
 
 - (IBAction)backButtonTapped:(id)sender {
