@@ -10,7 +10,7 @@ const initialState = {
 
 var all = ((state, action) => {
     if (action.type === 'DESERIALIZE_ALL') {
-        return Object.assign({}, state, deserialize(action.payload.response.d));
+        return Object.assign({}, state, deserialize(action.response.d));
     }
     if (action.type === 'REFRESH_SESSIONS') {
         return Object.assign({}, state, {loading: true});

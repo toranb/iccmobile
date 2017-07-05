@@ -1,7 +1,13 @@
-import { createEpicMiddleware } from 'redux-observable';
-import rootEpic from '../epics/index';
-import dependencies from '../epics/dependencies';
+import createSagaMiddleWare from 'redux-saga';
+import root from '../sagas/index';
 
-const epicMiddleware = createEpicMiddleware(rootEpic, { dependencies });
+const sagaMiddleware = createSagaMiddleWare();
 
-export default [epicMiddleware];
+const setup = () => {
+    sagaMiddleware.run(root);
+};
+
+export default {
+    middleware: [sagaMiddleware],
+    setup: setup
+};

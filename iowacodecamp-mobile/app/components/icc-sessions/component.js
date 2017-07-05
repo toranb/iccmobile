@@ -12,7 +12,7 @@ var stateToComputed = (state) => {
 
 var dispatchToActions = dispatch => {
   return {
-    refresh: () => dispatch({type: 'REFRESH_SESSIONS'})
+    refresh: () => dispatch({type: 'REFRESH_SESSIONS', wait: 2000})
   };
 };
 
