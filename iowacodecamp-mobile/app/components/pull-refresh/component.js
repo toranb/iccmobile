@@ -27,8 +27,11 @@ export default Component.extend({
 
   _touchStart(e) {
     const y = e.originalEvent.targetTouches[0].pageY;
+    const loading = get(this, 'loading');
+    const container = get(this, 'container');
+    const topOfPage = container.position().top === 0;
 
-    if (get(this, 'loading')) {
+    if (loading || !topOfPage) {
       return;
     }
 
@@ -99,6 +102,10 @@ export default Component.extend({
 
   pulling: computed('_startY', 'delta', function () {
     return get(this, '_startY') && get(this, 'delta') > 0;
+  }),
+
+  container: computed(function () {
+    return Ember.$('.container');
   })
 
 });

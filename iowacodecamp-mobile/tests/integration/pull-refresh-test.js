@@ -74,9 +74,11 @@ moduleForComponent('pull-refresh', 'Integration | Component | pull-refresh', {
 
 test('should render component and any html inside the block', function(assert) {
   this.render(hbs`
-    {{#pull-refresh refresh=refresh loading=loading}}
-    <span>X</span>
-    {{/pull-refresh}}
+    <div class="container">
+      {{#pull-refresh refresh=refresh loading=loading}}
+        <span>X</span>
+      {{/pull-refresh}}
+    </div>
   `);
 
   assert.equal(this.$().find('span').length, 1);
@@ -87,9 +89,11 @@ test('should render component and any html inside the block', function(assert) {
 
 test('pull and let go will refresh when delta >= 50', function() {
   this.render(hbs`
-    {{#pull-refresh refresh=refresh loading=loading}}
-    <span>X</span>
-    {{/pull-refresh}}
+    <div class="container">
+      {{#pull-refresh refresh=refresh loading=loading}}
+        <span>X</span>
+      {{/pull-refresh}}
+    </div>
   `);
 
   this.expectTop(0);
@@ -121,9 +125,11 @@ test('pull and let go will refresh when delta >= 50', function() {
 
 test('pull and let go will NOT refresh when delta < 50', function() {
   this.render(hbs`
-    {{#pull-refresh refresh=refresh loading=loading}}
-    <span>X</span>
-    {{/pull-refresh}}
+    <div class="container">
+      {{#pull-refresh refresh=refresh loading=loading}}
+        <span>X</span>
+      {{/pull-refresh}}
+    </div>
   `);
 
   this.expectTop(0);
@@ -155,9 +161,11 @@ test('pull and let go will NOT refresh when delta < 50', function() {
 
 test('over pulling will max out at 100 and snap back to preserve the default delta of 50', function() {
   this.render(hbs`
-    {{#pull-refresh refresh=refresh loading=loading}}
-    <span>X</span>
-    {{/pull-refresh}}
+    <div class="container">
+      {{#pull-refresh refresh=refresh loading=loading}}
+        <span>X</span>
+      {{/pull-refresh}}
+    </div>
   `);
 
   this.expectTop(0);
@@ -184,5 +192,58 @@ test('over pulling will max out at 100 and snap back to preserve the default del
     this.expectPulling(false);
     this.expectLoading(false);
     this.refreshFired(true);
+  });
+});
+
+test('when container is not at the top', function () {
+  this.render(hbs`
+    <div class="parent" style="overflow: hidden;">
+      <div class="wrapper" style="position: absolute; overflow: auto; height: 100%">
+        <ul class="container" style="height: 1500px;">
+          {{#pull-refresh refresh=refresh loading=loading}}
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+          {{/pull-refresh}}
+        </ul>
+      </div>
+    </div>
+  `);
+
+  this.expectTop(0);
+  this.expectPulling(false);
+  this.expectLoading(false);
+  this.refreshFired(false);
+
+  Ember.$('.wrapper').scrollTop(80);
+
+  this.expectTop(0);
+  this.expectPulling(false);
+  this.expectLoading(false);
+  this.refreshFired(false);
+
+  this.pullDown(10, 60);
+
+  this.expectTop(0);
+  this.expectPulling(false);
+  this.expectLoading(false);
+  this.refreshFired(false);
+
+  this.letGo();
+
+  this.expectTop(0);
+  this.expectPulling(false);
+  this.expectLoading(false);
+  this.refreshFired(false);
+
+  return wait().then(() => {
+    this.expectTop(0);
+    this.expectPulling(false);
+    this.expectLoading(false);
+    this.refreshFired(false);
   });
 });
