@@ -27,21 +27,9 @@ var all = ((state, action) => {
 
 var scroll = ((state, action) => {
     if (action.type === 'SCROLL') {
-        let previous = action.previous || state.position;
-        return Object.assign({}, state, {
-          position: action.position,
-          previous: previous
-        });
+        return Object.assign({}, state, {position: action.position});
     }
-    if (action.type === 'SCROLLPREV') {
-        let previous = state.previous;
-        let position = state.position;
-        return Object.assign({}, state, {
-          position: previous,
-          previous: position
-        });
-    }
-    return state || {position: 0, previous: 0};
+    return state || {position: 0};
 });
 
 export default combineReducers({
