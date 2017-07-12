@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import {deserialize, selectSession, selectSpeaker} from 'iowacodecamp/utilities/transform';
 
 const initialState = {
@@ -24,6 +25,26 @@ var all = ((state, action) => {
     return state || initialState;
 });
 
-export default {
-    all
-};
+var scroll = ((state, action) => {
+    if (action.type === 'SCROLL') {
+        let previous = action.previous || state.position;
+        return Object.assign({}, state, {
+          position: action.position,
+          previous: previous
+        });
+    }
+    if (action.type === 'SCROLLPREV') {
+        let previous = state.previous;
+        let position = state.position;
+        return Object.assign({}, state, {
+          position: previous,
+          previous: position
+        });
+    }
+    return state || {position: 0, previous: 0};
+});
+
+export default combineReducers({
+    all,
+    scroll
+});

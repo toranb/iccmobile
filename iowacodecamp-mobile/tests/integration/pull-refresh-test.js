@@ -197,7 +197,7 @@ test('over pulling will max out at 100 and snap back to preserve the default del
 
 test('when container is not at the top', function () {
   this.render(hbs`
-    <div class="parent" style="overflow: hidden;">
+    <div class="parent">
       <div class="wrapper" style="position: absolute; overflow: auto; height: 100%">
         <ul class="container" style="height: 1500px;">
           {{#pull-refresh refresh=refresh loading=loading}}

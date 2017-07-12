@@ -1,3 +1,5 @@
+/* global waitForFetch */
+
 import { test } from 'qunit';
 import moduleForAcceptance from 'iowacodecamp/tests/helpers/module-for-acceptance';
 
@@ -6,6 +8,7 @@ moduleForAcceptance('Acceptance | sessions');
 test('sessions route will show the list of available sessions', function(assert) {
     assert.expect(6);
     visit('/');
+    waitForFetch();
     andThen(function() {
         assert.equal(currentURL(), '/sessions');
         var rows = find('.session-row').length;
@@ -24,6 +27,7 @@ test('sessions route will show the list of available sessions', function(assert)
 test('session details route will show the session details', function(assert) {
     assert.expect(6);
     visit('/');
+    waitForFetch();
     click('.session-link:eq(0)');
     andThen(function() {
         assert.ok(currentURL().match(/^\/sessions\/[0-9]/));
@@ -43,6 +47,7 @@ test('session details route will show the session details', function(assert) {
 test('sessions will be sorted and grouped by listing time', function(assert) {
     assert.expect(4);
     visit('/');
+    waitForFetch();
     andThen(function() {
         assert.equal(currentURL(), '/sessions');
         var rows = find('.group-time').length;

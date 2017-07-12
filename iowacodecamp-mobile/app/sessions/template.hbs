@@ -2,7 +2,9 @@
 
   {{#if everything}}
     {{#pull-refresh refresh=refresh loading=loading}}
-      {{session-list everything=everything}}
+      {{#remember-scroll}}
+        {{session-list everything=everything}}
+      {{/remember-scroll}}
     {{/pull-refresh}}
   {{/if}}
 

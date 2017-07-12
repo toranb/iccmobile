@@ -1,3 +1,5 @@
+/* global waitForFetch */
+
 import { test } from 'qunit';
 import moduleForAcceptance from 'iowacodecamp/tests/helpers/module-for-acceptance';
 
@@ -6,6 +8,7 @@ moduleForAcceptance('Acceptance | speakers');
 test('speakers route will show the list of available speakers', function(assert) {
     assert.expect(6);
     visit('/speakers');
+    waitForFetch();
     andThen(function() {
         var rows = find('.speaker-row').length;
         assert.equal(rows, 31, rows);
@@ -25,6 +28,7 @@ test('speakers route will show the list of available speakers', function(assert)
 test('speaker details route will show the speaker details', function(assert) {
     assert.expect(9);
     visit('/speakers');
+    waitForFetch();
     click('.speaker-link :eq(0)');
     andThen(function() {
         var speaker_name = find('.speaker-detail-name');
@@ -50,6 +54,7 @@ test('speaker details route will show the speaker details', function(assert) {
 test('speaker image will have default png when no other available', function(assert) {
     assert.expect(2);
     visit('/speakers');
+    waitForFetch();
     click('.speaker-link:eq(1)');
     andThen(function() {
         var speaker_name = find('.speaker-detail-name');
@@ -62,6 +67,7 @@ test('speaker image will have default png when no other available', function(ass
 test('speaker details route has link to each session', function(assert) {
     assert.expect(3);
     visit('/speakers');
+    waitForFetch();
     click('.speaker-link:eq(0)');
     click('.speaker-session-link:eq(0) a');
     andThen(function() {

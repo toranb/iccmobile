@@ -1,3 +1,5 @@
 {{#icc-session as |session sessionSpeakers|}}
-  {{session-detail session=session speakers=sessionSpeakers}}
+  {{#scroll-top}}
+    {{session-detail session=session speakers=sessionSpeakers}}
+  {{/scroll-top}}
 {{/icc-session}}
