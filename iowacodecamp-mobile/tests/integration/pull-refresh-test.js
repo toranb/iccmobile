@@ -2,6 +2,7 @@ import Ember from 'ember';
 import hbs from 'htmlbars-inline-precompile';
 import wait from 'ember-test-helpers/wait';
 import { moduleForComponent, test } from 'ember-qunit';
+import PullRefreshComponent from 'iowacodecamp/components/pull-refresh/component';
 
 function touchEvent(type, y) {
   return new Ember.$.Event(type, {
@@ -196,6 +197,12 @@ test('over pulling will max out at 100 and snap back to preserve the default del
 });
 
 test('when container is not at the top', function () {
+  const StubComponent = PullRefreshComponent.extend({
+    top() {
+      return Ember.$('.container').position().top;
+    }
+  });
+  this.registry.register('component:pull-refresh', StubComponent);
   this.render(hbs`
     <div class="parent">
       <div class="wrapper" style="position: absolute; overflow: auto; height: 100%">

@@ -28,10 +28,9 @@ export default Component.extend({
   _touchStart(e) {
     const y = e.originalEvent.targetTouches[0].pageY;
     const loading = get(this, 'loading');
-    const container = get(this, 'container');
-    const topOfPage = container.position().top === 0;
+    const atTop = this.top() === 0;
 
-    if (loading || !topOfPage) {
+    if (loading || !atTop) {
       return;
     }
 
@@ -104,8 +103,8 @@ export default Component.extend({
     return get(this, '_startY') && get(this, 'delta') > 0;
   }),
 
-  container: computed(function () {
-    return Ember.$('.container');
-  })
+  top() {
+    return document.body.scrollTop;
+  }
 
 });
