@@ -28,7 +28,7 @@ app.get('/images/:imageId', function(req, res){
     if (response && response.statusCode === 200) {
       res.setHeader('Content-Type', response.headers['content-type']);
       res.set('Content-type', response.headers['content-type']);
-      res.send(response);
+      res.end(body);
     }else{
       res.set('Content-type', 'image/png');
       return res.end(defaultImage);
