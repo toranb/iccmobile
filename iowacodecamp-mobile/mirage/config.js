@@ -16,7 +16,7 @@ export default function() {
             "location": "Chicago, IL",
             "name": "Wendy Istvanick",
             "bio": "Wendy has been a developer with ThoughtWorks for over 20 years and has enjoyed solving technical problems and making people happy along the way. She also loves to travel. So life as a consultant has been great, giving her many chances to enable solutions while living in places she never would have dreamed of living while growing up, including Brazil, France, India, and Zambia.\r\n\r\nIn addition to coding on many projects she has had the opportunity to facilitate training both internal to ThoughtWorks and at client sites over the years thus being able to share her craft with others. Most recently this includes delivering application security training to consultants around the globe, including trainer other trainers to deliver the same material.",
-            "img": "xyz.jpg"
+            "imgLarge": "xyz.jpg"
           }
         }, {
           "session": "From Legacy MVC to Modern MVC: An ASP.NET Core Migration Path",
@@ -28,7 +28,7 @@ export default function() {
             "location": "Madison, WI",
             "name": "Scott Addie",
             "bio": "Scott Addie is a Microsoft Certified Solutions Developer (Web Applications), a Microsoft MVP (Visual Studio and Development Technologies), and a .NET Solutions Architect with CUNA Mutual Group in Madison, WI. He has over a decade of experience in full-stack enterprise application development using Microsoft web technologies and JavaScript. In his spare time, Scott can be found spending time with his wife and 3 kids, attending user groups, code camps, &amp; conferences, and blogging about ASP.NET and JavaScript at scottaddie.com.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Working with Azure WebJobs",
@@ -40,7 +40,7 @@ export default function() {
             "location": "Iowa City, IA",
             "name": "Tim VanFosson",
             "bio": "Tim works at the Nerdery as a Principal Software Engineer, mostly writing web applications and APIs using C#/.NET. Before that he worked at The University of Iowa for nearly 30 years as a system administrator, manager, and programmer. Tim has a BS and MCS in computer science from Iowa and loves writing code and poetry.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Crafting Innovation",
@@ -52,7 +52,7 @@ export default function() {
             "location": "Kansas City, MO",
             "name": "Steve Green",
             "bio": "Over the last decade, Steve has focused on exploring digital craftsmanship and innovative disruption. He has spent time with organizations of various sizes, in numerous industries, maximizing business value by employing the artistry of technology. Throughout his career, Steve has accepted a variety of leadership roles, each focused on multiple aspects of application architecture and digital transformation. This experience has provided him with a unique perspective on the challenges and opportunities of constant innovation.\r\n\r\nCurrently, Steve serves as the Chief Digital Officer and a Managing Member of Wirestream, an interactive consultancy headquartered in Kansas City. With its roots in business analysis and marketing technologies, Wirestream has a passion for helping clients fill gaps within complex digital ecosystems. Steve leads team members across a multitude of disciplines including software architecture, data science, business intelligence, interactive engineering, development operations, creative design, application development, and quality control practices. Whether engaged for their specialized talents or combined to meet complex project needs, his team excels at delivering exceptional service around evolving digital landscapes.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Successful Patterns for Application Automation",
@@ -64,7 +64,7 @@ export default function() {
             "location": "South Amana, Iowa",
             "name": "Nathan L Smith",
             "bio": "Nathan Smith is an engineer at Chef Software who builds stuff to help people build stuff. He lives in South Amana, Iowa with his family.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "UX-driven Development at Pear Deck",
@@ -76,7 +76,7 @@ export default function() {
             "location": "Iowa City",
             "name": "Riley Eynon-Lynch",
             "bio": "Riley is the CEO of Pear Deck, his second software company. The first was acquired in 2013. He is a programmer, teacher, and bearer of general existential angst.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Practical Cryptography for the Everyday Dev",
@@ -88,7 +88,7 @@ export default function() {
             "location": "West Des Moines",
             "name": "Jon von Gillern",
             "bio": "Jon is a Consultant from West Des Moines, Iowa. After his wife and kids, his love and passion lies with Regular Expressions, C#, Data Visualization and Azure.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Adding ES6 to Your Developer Toolbox",
@@ -100,7 +100,7 @@ export default function() {
             "location": "St. Louis MO",
             "name": "Jeff Strauss",
             "bio": "Jeff is both a software consultant and a licensed attorney. Because of his unique experiences that combine technology and law, he is equally comfortable presenting to a room full of geeks or donning a suit to meet with corporate executives. He maintains a passion for solving problems with inspired solutions, improving life through technology. \r\n\r\nA dedicated member of the developer community, Jeff regularly travels to speak on both technical and business-oriented topics across the country. He is co-owner of Arana Software and enjoys the honor of serving on the board of directors for DevUp Conference (formerly St. Louis Days of .NET) and the St. Louis .NET User Group.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Chrome App and Extension crash course",
@@ -112,7 +112,7 @@ export default function() {
             "location": "Des Moines",
             "name": "Chuck Rolek",
             "bio": "Fueled by silliness and coffee I try to create efficiency in everything I and others do. I absolutely love technology, and I spend a vast majority of my time learning about it or teaching it to others. Recently I?ve made the jump to the consulting world and traded in my Front-end dev skills for the  DevOps/Nodejs stack.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Develop Empathy, Develop Accessible User Experiences",
@@ -124,7 +124,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Andrea Skeries",
             "bio": "Andrea has spent over a decade using her artistic vision and technical know-how to design and develop professional websites with a strong background in healthcare and accessibility. A member of the International Association of Accessibility Professionals (IAAP) and the organizer of the Iowa Web Accessibility, UX, and Inclusive Design meetup group, she?s dedicated to ensuring everyone has equal access to content and functionality on the web.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Developing on a SaaS-ish Dynamics AX Platform",
@@ -136,7 +136,7 @@ export default function() {
             "location": "Coralville, IA",
             "name": "Lane Swenka",
             "bio": "Lane has provided technical and functional consultation, application development, and integration services for Microsoft Dynamics AX since 2011.  \r\n\r\nAt present, Lane is a Technical Solutions Engineer for mcaConnect, and 2-time Microsoft Business Solutions MVP (formerly known as Dynamics AX MVP).  He has a passion for innovation, has facilitated implementations across the world, and directly influenced the development of AX7.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Building your First IoT Project",
@@ -148,7 +148,7 @@ export default function() {
             "location": "Lincoln, NE",
             "name": "Adam Barney",
             "bio": "Monday, September 21, 2015\r\n3:27 PM\r\n\r\nAdam is a nerd. That kept me humble and nearly friendless (*sniff*) through school, but I wear it as a badge of honor now. After buying a Commodore 64 with money from his paper route in the 4th grade, he?s never stopped learning about computers and how to make these stupid machines do cool things. I am a Microsoft C# MVP and ASP Insider, running my independent consulting company from my home in Lincoln, NE. In my spare time, I run a user group and a couple developer conferences, and generally take on way more work than I have time for. I can also be found speaking at many mid-west user groups, code camps and developer conferences.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "All Teams Are Distributed",
@@ -160,7 +160,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Keith Dahlby",
             "bio": "Keith Dahlby is a father, web developer, Git enthusiast, language geek and seven-time C# MVP from Cedar Rapids, Iowa. By day he's CTO of HuBoard and Architect for the New Bohemian Innovation Collaborative; by night he once blogged with Los Techies, but now just argues on Twitter. His open source efforts include posh-git, a Git environment for PowerShell; and up-for-grabs.net, a site featuring open source projects looking to mentor new contributors. He's also a core contributor to LibGit2Sharp, used by GitHub for Windows and Git for Visual Studio. Keith studied Computer Engineering and Human-Computer Interaction at Iowa State University, and has spoken at developer events around the world. His talks have been described as \"terrific!\", \"very interactive!\", and \"the best I've seen all hour!\".",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Introduction into ASP.NET Core",
@@ -172,7 +172,7 @@ export default function() {
             "location": "Ankeny, Iowa",
             "name": "Scott Sauber",
             "bio": "I'm a technology enthusiast, mainly focused on web development and DevOps.  I primarily work with C#, JavaScript, HTML, CSS, and PowerShell.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Advanced Basics: SOLID Principles",
@@ -184,7 +184,7 @@ export default function() {
             "location": "Lincoln, NE",
             "name": "Adam Barney",
             "bio": "Monday, September 21, 2015\r\n3:27 PM\r\n\r\nAdam is a nerd. That kept me humble and nearly friendless (*sniff*) through school, but I wear it as a badge of honor now. After buying a Commodore 64 with money from his paper route in the 4th grade, he?s never stopped learning about computers and how to make these stupid machines do cool things. I am a Microsoft C# MVP and ASP Insider, running my independent consulting company from my home in Lincoln, NE. In my spare time, I run a user group and a couple developer conferences, and generally take on way more work than I have time for. I can also be found speaking at many mid-west user groups, code camps and developer conferences.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Applying Design Patterns to Everyday Problems",
@@ -196,7 +196,7 @@ export default function() {
             "location": "Appleton, WI",
             "name": "David Berry",
             "bio": "I'm a Solutions Architect with over 20 years of experience in building software systems.  I started out as a Java developer and then switched to .NET in 2003.  I'm also a Pluralsight author and I've done lots of work in helping to mentor others in how to design and build great software systems.  I try to bring a pragmatic approach to everything I do, making sure the software I build is simple, understandable and balances responsibilities between different components of the system. When speaking or teaching, I emphasize real world scenarios encountered by developers every day and show how to solve them so you can be more effective at what you do.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "So you want to build a mobile app... now what?",
@@ -208,7 +208,7 @@ export default function() {
             "location": "Kansas City, KS",
             "name": "Mike Cerny",
             "bio": "Mike is a full stack web and mobile programmer, who speaks to user groups about mobile application development. Passionate about new technology, Mike follows the latest trends in all area of mobile application development (especially Xamarin), JavaScript frameworks and TypeScript, and web application development with ASP.NET. Mike co-organizes the Kansas City Mobile .NET Developers Group.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Open Space / Fishbowl Discussion",
@@ -220,7 +220,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Iowa Code Camp",
             "bio": "Sessions presented by Iowa Code Camp",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Making Sense of the new ASP.NET Stack",
@@ -232,7 +232,7 @@ export default function() {
             "location": "Lincoln, NE",
             "name": "Adam Barney",
             "bio": "Monday, September 21, 2015\r\n3:27 PM\r\n\r\nAdam is a nerd. That kept me humble and nearly friendless (*sniff*) through school, but I wear it as a badge of honor now. After buying a Commodore 64 with money from his paper route in the 4th grade, he?s never stopped learning about computers and how to make these stupid machines do cool things. I am a Microsoft C# MVP and ASP Insider, running my independent consulting company from my home in Lincoln, NE. In my spare time, I run a user group and a couple developer conferences, and generally take on way more work than I have time for. I can also be found speaking at many mid-west user groups, code camps and developer conferences.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Azure: Move to the Cloud, not just a Remote Server",
@@ -244,7 +244,7 @@ export default function() {
             "location": "Des Moines, Iowa",
             "name": "Aaron Hoffman",
             "bio": "Aaron is the co-founder of Stonefinch, an Agile Development and Data Analytics Consultancy based in Des Moines, Iowa. He has been a tech enthusiast since childhood and has been writing software professionally for the past 10 years. He has experience working in various aspects of software and business development and is passionate about empowering developers and product teams through agile development, lean startup, and human-centered design. He is a leader of the .NET User Group in Des Moines and is an active member of the entrepreneur community.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Getting Started with ASP.NET Core 1.0 in Visual Studio Code",
@@ -256,7 +256,7 @@ export default function() {
             "location": "Madison, WI",
             "name": "Scott Addie",
             "bio": "Scott Addie is a Microsoft Certified Solutions Developer (Web Applications), a Microsoft MVP (Visual Studio and Development Technologies), and a .NET Solutions Architect with CUNA Mutual Group in Madison, WI. He has over a decade of experience in full-stack enterprise application development using Microsoft web technologies and JavaScript. In his spare time, Scott can be found spending time with his wife and 3 kids, attending user groups, code camps, &amp; conferences, and blogging about ASP.NET and JavaScript at scottaddie.com.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Troubleshoot Like a Boss",
@@ -268,7 +268,7 @@ export default function() {
             "location": "Lenexa, KS",
             "name": "Ryan Doll",
             "bio": "Ryan brings more than 11 years of development experience across multiple technologies at VML. As a Senior Development Engineer, he currently focuses on client-side and mobile development with technologies such as HTML5, JavaScript and CSS3. Since joining VML in 2005, Ryan's expertise has been utilized on a number of client engagements, including Sprint, Dell, Gatorade, Southwest Airlines, ESPN, Cartoon Network, Walmart, Sam's Club, Serengeti, Ford of Canada and Emerson Network Power. With a passion for technology and a desire to innovate, Ryan is always looking for new ways to take emerging technologies and combine them with creative ideas. Reliable and effective, he is seen as the go-to guy for many challenging VML projects.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Testing With Behat",
@@ -280,7 +280,7 @@ export default function() {
             "location": "Fort Collins, CO",
             "name": "Matthew Loberg",
             "bio": "With a varied background in PHP, Python, Ruby, and DevOps Matt has had a lot of experience in his 6 years in the software world. He gets excited about easy to use well designed APIs and well tested code. He is currently working at MadWire in Fort Collins, Colorado, where he serves as a Senior Software Engineer. In his free time you can find him writing and recording music.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Introduction to ASP.NET Core Tag Helpers",
@@ -292,7 +292,7 @@ export default function() {
             "location": "Ankeny, Iowa",
             "name": "Scott Sauber",
             "bio": "I'm a technology enthusiast, mainly focused on web development and DevOps.  I primarily work with C#, JavaScript, HTML, CSS, and PowerShell.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Implementing DDD, Year One",
@@ -304,7 +304,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Matt Winger",
             "bio": "I am a Senior Software Developer at Geonetric.  I am a Domain Driven Design enthusiast working on a second year of implementing DDD.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Modern Web Development Workflow backed by .NET",
@@ -316,7 +316,7 @@ export default function() {
             "location": "St. Louis MO",
             "name": "Jeff Strauss",
             "bio": "Jeff is both a software consultant and a licensed attorney. Because of his unique experiences that combine technology and law, he is equally comfortable presenting to a room full of geeks or donning a suit to meet with corporate executives. He maintains a passion for solving problems with inspired solutions, improving life through technology. \r\n\r\nA dedicated member of the developer community, Jeff regularly travels to speak on both technical and business-oriented topics across the country. He is co-owner of Arana Software and enjoys the honor of serving on the board of directors for DevUp Conference (formerly St. Louis Days of .NET) and the St. Louis .NET User Group.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Don't Stress, Just WordPress",
@@ -328,7 +328,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Seth Adam",
             "bio": "Seth Adam is principal and founder of Dakota Softworks, LLC, a custom software development firm in Cedar Rapids, IA.  Specializations include process automation, systems integration, and web and mobile application development.\r\n\r\nAt home at his soldering bench with an oscilloscope and controller boards, or knee deep in .NET code on his MacBook, Seth has been building electronics and working with operating systems and software since the mid '80s.  Additionally, he has around two decades of corporate and team development experience.\r\n\r\nSeth enjoys hearing about projects, problems, and ideas, and is happy to offer assistance when it may be needed.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "I was too cheap to pay for a server, so I used AWS Lambda",
@@ -340,7 +340,7 @@ export default function() {
             "location": "Des Moines",
             "name": "Chuck Rolek",
             "bio": "Fueled by silliness and coffee I try to create efficiency in everything I and others do. I absolutely love technology, and I spend a vast majority of my time learning about it or teaching it to others. Recently I?ve made the jump to the consulting world and traded in my Front-end dev skills for the  DevOps/Nodejs stack.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Introduction to Bitcoin",
@@ -352,7 +352,7 @@ export default function() {
             "location": "North Liberty, Iowa",
             "name": "Chris Stewart",
             "bio": "I'm a graduated from the University of Iowa a few years ago with a CS and Math degree. After briefly working for a Fortune 50 corporation I raised some pre-seed venture capital to found a Bitcoin company.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Send SMS Messages and Receive Phone Calls with Twilio in Under 60 Minutes",
@@ -364,7 +364,7 @@ export default function() {
             "location": "West Des Moines",
             "name": "Jon von Gillern",
             "bio": "Jon is a Consultant from West Des Moines, Iowa. After his wife and kids, his love and passion lies with Regular Expressions, C#, Data Visualization and Azure.",
-            "img": null
+            "imgLarge": null
           }
         }, {
           "session": "Lightning Talks",
@@ -376,7 +376,7 @@ export default function() {
             "location": "Cedar Rapids, IA",
             "name": "Iowa Code Camp",
             "bio": "Sessions presented by Iowa Code Camp",
-            "img": null
+            "imgLarge": null
           }
         }]
       }

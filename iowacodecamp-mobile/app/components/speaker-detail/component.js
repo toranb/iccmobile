@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 var SpeakerDetailComponent = Ember.Component.extend({
     layout: hbs`
         <div class="profile-wrap">
-          <img class="speaker-detail-img round center" src={{speaker-url speaker.img}}>
+          <img class="speaker-detail-img round center" src={{speaker-url speaker.imgLarge}}>
           <h4 class="speaker-detail-name">{{speaker.name}}</h4>
           <div class="speaker-detail-location">{{speaker.location}}</div>
           <div class="speaker-detail-web">

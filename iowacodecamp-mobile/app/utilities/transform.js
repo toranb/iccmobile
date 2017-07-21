@@ -24,8 +24,8 @@ var deserialize = function(response) {
     response.data.forEach(function(data) {
         var session_id = Ember.uuid();
         var speaker_id = Ember.uuid();
-        var session = {id: session_id, name: data.session, level: data.level, time: data.time, room: data.room, desc: data.desc, speaker: speaker_id, speaker_name: data.speaker.name, speaker_image: data.speaker.img};
-        var speaker = {id: speaker_id, name: data.speaker.name, bio: data.speaker.bio, session: session_id, img: data.speaker.img, location:data.speaker.location, web: data.speaker.web};
+        var session = {id: session_id, name: data.session, level: data.level, time: data.time, room: data.room, desc: data.desc, speaker: speaker_id, speaker_name: data.speaker.name, speaker_image: data.speaker.imgLarge};
+        var speaker = {id: speaker_id, name: data.speaker.name, bio: data.speaker.bio, session: session_id, imgLarge: data.speaker.imgLarge, location:data.speaker.location, web: data.speaker.web};
         sessions.push(session);
         speakers.push(speaker);
     });
