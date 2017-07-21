@@ -364,7 +364,7 @@ export default function() {
             "location": "West Des Moines",
             "name": "Jon von Gillern",
             "bio": "Jon is a Consultant from West Des Moines, Iowa. After his wife and kids, his love and passion lies with Regular Expressions, C#, Data Visualization and Azure.",
-            "imgLarge": null
+            "imgLarge": "TimVanFosson.jpg"
           }
         }, {
           "session": "Lightning Talks",

@@ -406,10 +406,18 @@ app.get('/api/sessions', function(req, res) {
 
 app.get('/images/:imageId', function(req, res){
   if (!req.params.imageId || req.params.imageId == 'null') {
-    res.set('Content-type', 'image/png`');
+    res.set('Content-type', 'image/png');
     return res.end(defaultImage);
   }
-  request.get('http://iowacodecamp.com/public/images/speakers/' + req.params.imageId).pipe(res);
+  request.get('http://iowacodecamp.com/public/images/speakers/' + req.params.imageId, function(err, response){
+    if (response && response.statusCode === 200) {
+      res.setHeader('Content-Type', response.headers['content-type']);
+      res.send(response);
+    }else{
+      res.set('Content-type', 'image/png');
+      return res.end(defaultImage);
+    }
+  });
 });
 
 app.listen(port, function(){
