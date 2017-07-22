@@ -24,16 +24,7 @@ app.get('/images/:imageId', function(req, res){
     res.set('Content-type', 'image/png');
     return res.end(defaultImage);
   }
-  request.get('http://iowacodecamp.com/public/images/speakers/' + req.params.imageId, function(err, response, body){
-    if (response && response.statusCode === 200) {
-      res.setHeader('Content-Type', response.headers['content-type']);
-      res.set('Content-type', response.headers['content-type']);
-      res.end(body);
-    }else{
-      res.set('Content-type', 'image/png');
-      return res.end(defaultImage);
-    }
-  });
+  request.get('http://iowacodecamp.com/public/images/speakers/' + req.params.imageId).pipe(res);
 });
 
 app.listen(port, function(){
