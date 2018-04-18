@@ -1,14 +1,16 @@
 To run the client app with ember-cli
 
-1) install node and bower
+1) install nodeJS
 
     https://nodejs.org/en/download/
 
 2) build and run the app with ember-cli
 
-    cd iowacodecamp-mobile
-    npm i && bower i
-    ember s
+```bash
+cd iowacodecamp-mobile
+yarn
+ember s
+```
 
 To run the app locally with docker
 
@@ -18,8 +20,10 @@ To run the app locally with docker
 
 2) build and run the app with docker
 
-    docker build -t iccmobile .
-    docker run -it -p 80:8080 iccmobile
+```bash
+docker build -t iccmobile .
+docker run -it -p 80:8080 iccmobile
+```
 
 To deploy via heroku
 
