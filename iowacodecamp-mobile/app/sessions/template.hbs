@@ -1,0 +1,7 @@
+{{#conference-layout as |everything loading refresh|}}
+  {{#if everything}}
+    {{#pull-refresh refresh=refresh loading=loading}}
+      {{conference-day everything=everything}}
+    {{/pull-refresh}}
+  {{/if}}
+{{/conference-layout}}

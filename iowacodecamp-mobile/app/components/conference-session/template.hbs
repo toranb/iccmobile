@@ -1,0 +1,15 @@
+<small>{{session.time}}</small>
+
+<h3>{{session.name}}</h3>
+
+{{#if session.speaker_name}}
+  <ul class="speakers">
+    <li>{{session.speaker_name}}</li>
+  </ul>
+{{/if}}
+
+{{#if session.desc}}
+  <div class="description">
+    <p>{{session.desc}}</p>
+  </div>
+{{/if}}

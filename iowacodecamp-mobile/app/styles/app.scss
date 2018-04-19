@@ -1,0 +1,117 @@
+$background: #e8edf1;
+$header: #001d36;
+$session: white;
+$description: #40586e;
+$ember: #e15d44;
+
+.refresh-spinner {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.refresh-child {
+  background-color: $background;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: $header;
+  background: $background;
+}
+
+h2 {
+  margin: 0;
+  padding: 1rem;
+  padding-left: calc(env(safe-area-inset-left) + 1rem);
+  padding-right: calc(env(safe-area-inset-right) + 1rem);
+  text-align: center;
+}
+
+.content {
+  padding-top: calc(env(safe-area-inset-top) + 4rem);
+  padding-bottom: 1rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.session {
+  margin: 0.125rem 0.5rem;
+  margin-left: calc(env(safe-area-inset-left) + 0.5rem);
+  margin-right: calc(env(safe-area-inset-right) + 0.5rem);
+  padding: 1rem;
+  background: $session;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition: background-color 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  small {
+    font-size: 80%;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  ul.speakers {
+    list-style-type: none;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      color: $description;
+
+      &:after {
+        content: ' · ';
+      }
+
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+
+  .description {
+    margin-top: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.15s ease-out, margin-top;
+    transition-delay: 0s, 0.15s;
+
+    p {
+      margin: 0;
+      color: $description;
+      white-space: pre-line;
+    }
+  }
+
+  &.is-now {
+    outline: solid 2px $ember;
+  }
+
+  &.is-break {
+    background: transparent;
+  }
+
+  &.is-expanded {
+    .description {
+      max-height: 50rem;
+      margin-top: 0.5rem;
+      transition: max-height 0.3s ease-in;
+      transition-delay: 0s;
+    }
+  }
+}

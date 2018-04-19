@@ -1,0 +1,7 @@
+<h2>Iowa Code Camp</h2>
+
+{{#each everything as |group|}}
+  {{#each group.sessions as |session|}}
+    {{conference-session session=session}}
+  {{/each}}
+{{/each}}
