@@ -1,0 +1,14 @@
+<div class="star-group" style={{width}}>
+  <div class="star-container">
+    {{#each stars as |star|}}
+    <span onclick={{action "rate" session.id star}}>★</span>
+    {{/each}}
+  </div>
+</div>
+<div class="star-group backdrop">
+  <div class="star-container">
+    {{#each stars as |star|}}
+    <span onclick={{action "rate" session.id star}}>★</span>
+    {{/each}}
+  </div>
+</div>

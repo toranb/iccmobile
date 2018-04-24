@@ -11,5 +11,8 @@
 {{#if session.desc}}
   <div class="description">
     <p>{{session.desc}}</p>
+    {{#unless (equal session.speaker_name "Iowa Code Camp")}}
+      {{star-rating session=session class="star-rating"}}
+    {{/unless}}
   </div>
 {{/if}}

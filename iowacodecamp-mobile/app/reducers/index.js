@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { deserialize } from 'iowacodecamp/utilities/transform';
 import { createSelector } from 'reselect';
+import reviews from 'iowacodecamp/reducers/reviews';
 
 const initialState = {
   sessions: [],
@@ -66,5 +67,6 @@ export const getEverything = createSelector(
 );
 
 export default combineReducers({
-  all
+  all,
+  reviews
 });
