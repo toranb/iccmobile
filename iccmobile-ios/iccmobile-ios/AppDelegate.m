@@ -26,8 +26,6 @@
 
 - (void)checkInternet
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
     NSURL *url = [NSURL URLWithString:@"https://www.google.com"];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -37,7 +35,6 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
         if (error || httpResponse.statusCode != 200) {
             [self alertMessage:@"Error has occured fetching session data from the server"];

@@ -7,15 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface ViewController : UIViewController <UIWebViewDelegate>
-@property (strong, nonatomic) IBOutlet UIWebView *viewWeb;
+@interface ViewController : UIViewController <WKNavigationDelegate, WKUIDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *goBack;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-
-@property (strong, nonatomic) NSString *lastKnownUrl;
-- (void)webViewDidFinishLoad:(UIWebView *)webView;
-
 
 @end
 

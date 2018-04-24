@@ -10,60 +10,57 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) UIActivityIndicatorView *activityView;
+
 @end
 
 @implementation ViewController
-@synthesize viewWeb;
 @synthesize goBack;
-@synthesize spinner;
-@synthesize lastKnownUrl;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    NSString *deviceModel = (NSString*)[UIDevice currentDevice].model;
-    if ([deviceModel rangeOfString:@"iPad"].location != NSNotFound)  {
-        [self.viewWeb setFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
-    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self createActivityView];
+    [self.view addSubview:self.activityView];
+    
+    WKWebView *webView = [self createWebView];
+    [self.view addSubview:webView];
+}
+
+- (WKWebView *)createWebView {
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+    [webView setFrame:CGRectMake(0,-80,self.view.frame.size.width,self.view.frame.size.height+80)];
+    
+    webView.hidden = YES;
+    webView.UIDelegate = self;
+    webView.navigationDelegate = self;
+    webView.scrollView.bounces = NO;
+    webView.allowsBackForwardNavigationGestures = NO;
+    
     NSString *fullUrl = @"https://iccmobile.herokuapp.com";
     NSURL *url = [NSURL URLWithString:fullUrl];
-    [viewWeb loadRequest:[NSURLRequest requestWithURL:url]];
-    viewWeb.delegate = self;
-    viewWeb.scrollView.bounces = NO;
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [webView loadRequest:request];
+    
+    return webView;
 }
 
-- (IBAction)backButtonTapped:(id)sender {
-    if ([lastKnownUrl isEqualToString:@"https://iccmobile.herokuapp.com/#/sessions"]) {
-        [goBack setHidden:NO];
-    }else{
-        [goBack setHidden:YES];
-    }
-    [viewWeb goBack];
+- (void)createActivityView {
+    self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityView.center = self.view.center;
+    self.activityView.hidesWhenStopped = true;
+    self.activityView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    [self.activityView startAnimating];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [spinner setHidden:YES];
-}
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSString *theUrl = request.URL.absoluteString;
-    lastKnownUrl = theUrl;
-    if ([theUrl isEqualToString:@"https://iccmobile.herokuapp.com/#/sessions"]) {
-        [goBack setHidden:YES];
-    }else if ([theUrl isEqualToString:@"https://iccmobile.herokuapp.com/"]) {
-        [goBack setHidden:YES];
-    }else{
-        [goBack setHidden:NO];
-    }
-    return YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    [self.activityView stopAnimating];
+    [webView setHidden:NO];
 }
 
 @end
