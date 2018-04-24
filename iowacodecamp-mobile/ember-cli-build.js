@@ -5,7 +5,10 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      loose: true
+      loose: true,
+      plugins: [
+        'transform-object-rest-spread'
+      ]
     },
     'esw-index': {
       location: 'index.html',

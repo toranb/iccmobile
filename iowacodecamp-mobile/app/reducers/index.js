@@ -14,11 +14,24 @@ const all = ((state, action) => {
   if (action.type === 'DESERIALIZE_ALL') {
     return Object.assign({}, state, deserialize(action.response.d));
   }
+  if (action.type === 'persist/REHYDRATE') {
+    const { payload } = action;
+    if (payload && payload.all) {
+      return Object.assign({}, state, payload.all);
+    }
+    return state;
+  }
   if (action.type === 'REFRESH_SESSIONS') {
-    return Object.assign({}, state, {loading: true});
+    return {
+      ...state,
+      loading: true
+    }
   }
   if (action.type === 'REFRESH_FAILED') {
-    return Object.assign({}, state, {loading: false});
+    return {
+      ...state,
+      loading: false
+    }
   }
   return state || initialState;
 });
