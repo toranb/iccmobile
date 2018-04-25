@@ -12,7 +12,7 @@ module.exports = function(defaults) {
     },
     'esw-index': {
       location: 'index.html',
-      version: '4'
+      version: '5'
     },
     'asset-cache': {
       include: [
