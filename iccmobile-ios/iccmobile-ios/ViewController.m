@@ -33,7 +33,6 @@
 
 - (WKWebView *)createWebView {
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame];
-    [webView setFrame:CGRectMake(0,-80,self.view.frame.size.width,self.view.frame.size.height+80)];
     
     webView.hidden = YES;
     webView.UIDelegate = self;
