@@ -35,8 +35,8 @@ h2 {
 }
 
 .content {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: m#{a}x(.5rem, env(safe-area-inset-top));
+  padding-bottom: m#{a}x(.5rem, env(safe-area-inset-bottom));
 }
 
 .session {
