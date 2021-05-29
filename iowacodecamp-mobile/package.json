@@ -17,6 +17,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "broccoli-asset-rev": "^2.4.5",
     "ember-cli": "3.1.2",
     "ember-cli-app-version": "^3.0.0",
@@ -28,7 +29,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mirage": "^0.4.3",
     "ember-cli-qunit": "^4.1.1",
-    "ember-cli-sass": "^7.1.7",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
@@ -51,7 +52,6 @@
     "ember-service-worker-asset-cache": "^0.6.2",
     "ember-service-worker-cache-fallback": "^0.6.1",
     "ember-service-worker-index": "^0.6.6",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "ember-source": "3.1.1",
     "ember-symbol-observable": "1.0.1",
     "ember-web-app": "^2.3.0",
@@ -62,7 +62,8 @@
     "redux-persist": "4.8.0",
     "redux-saga": "0.16.0",
     "redux-thunk": "2.2.0",
-    "reselect": "3.0.1"
+    "reselect": "3.0.1",
+    "sass": "^1.34.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
